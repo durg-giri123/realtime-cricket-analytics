@@ -1,30 +1,37 @@
 # 🏏 Cricbuzz LiveStats: Real-Time Cricket Insights & SQL-Based Analytics
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://realtime-cricket-analytics-zwcckghmtjbz86d3mpkw59.streamlit.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/durg-giri123/realtime-cricket-analytics)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
+[![Database](https://img.shields.io/badge/Database-SQLite%203NF-green?logo=sqlite)](https://www.sqlite.org/)
+
+> 🚀 **Live Application:** [https://realtime-cricket-analytics-zwcckghmtjbz86d3mpkw59.streamlit.app/](https://realtime-cricket-analytics-zwcckghmtjbz86d3mpkw59.streamlit.app/)
+
 A comprehensive sports analytics and database management platform that integrates live cricket data from the **Cricbuzz REST API** with a **3NF-normalized relational SQL database** and an interactive multi-page **Streamlit dashboard**.
 
 ---
 
 ## 🌟 Key Features
 
-1. **⚡ Real-Time Match Updates (`pages/1_🏏_Live_Matches.py`):**
+1. **⚡ Real-Time Match Updates (`pages/1_Live_Matches.py`):**
    - Ingests ongoing cricket matches via Cricbuzz REST API (RapidAPI).
    - Real-time scorecards, overs, run rates, active batsmen, and current bowler metrics.
    - Built-in zero-downtime offline simulator fallback if API keys or rate limits expire.
    - One-click ingestion to save live match data into the SQLite database.
 
-2. **📊 Top Player Statistics & Leaderboards (`pages/2_📊_Top_Stats.py`):**
+2. **📊 Top Player Statistics & Leaderboards (`pages/2_Top_Stats.py`):**
    - High-level aggregations across Test, ODI, and T20I formats.
    - Most runs, highest batting averages, most wickets, best bowling economy, and record partnerships.
    - Interactive Plotly visualizations (horizontal bar charts, scatter plots).
 
-3. **🔍 25 Enterprise SQL Analytics Case Studies (`pages/3_🔍_SQL_Analytics.py`):**
+3. **🔍 25 Enterprise SQL Analytics Case Studies (`pages/3_SQL_Analytics.py`):**
    - **Beginner Level (Q1–Q8):** Filtering, grouping, multi-table joins, formatting.
    - **Intermediate Level (Q9–Q16):** Subqueries, conditional aggregates, clutch close-match analysis, venue economy.
    - **Advanced Level (Q17–Q25):** Window functions (`ROW_NUMBER`, `LAG`), CTEs, toss advantage calculation, weighted multi-discipline scoring, standard deviation consistency metrics.
    - Interactive execution, execution time measurement, CSV export, and tailored Plotly charts for each query.
    - Interactive Custom SQL Sandbox for executing ad-hoc queries safely.
 
-4. **🛠️ Data Governance & CRUD Operations (`pages/4_🛠️_CRUD_Operations.py`):**
+4. **🛠️ Data Governance & CRUD Operations (`pages/4_CRUD_Operations.py`):**
    - Form-based administration for players and teams.
    - Complete Create, Read, Update, and Delete operations.
    - Defensive validation and automatic Soft Delete to protect foreign key relational integrity.
@@ -55,13 +62,14 @@ cricbuzz_livestats/
 │   └── queries.py               # Complete catalog of all 25 SQL queries & metadata
 │
 ├── utils/
-│   └── db_connection.py         # Thread-safe DB context manager & query runner
+│   ├── db_connection.py         # Thread-safe DB context manager & query runner
+│   └── ui_theme.py              # Broadcast dark sports design engine
 │
 └── pages/
-    ├── 1_🏏_Live_Matches.py      # Real-time scorecards & match ingestion
-    ├── 2_📊_Top_Stats.py         # Player leaderboards & interactive charts
-    ├── 3_🔍_SQL_Analytics.py     # 25 SQL case studies & interactive runner
-    └── 4_🛠️_CRUD_Operations.py   # Player & match administrative forms
+    ├── 1_Live_Matches.py        # Real-time scorecards & match ingestion
+    ├── 2_Top_Stats.py           # Player leaderboards & interactive charts
+    ├── 3_SQL_Analytics.py       # 25 SQL case studies & interactive runner
+    └── 4_CRUD_Operations.py     # Player & match administrative forms
 ```
 
 ---
