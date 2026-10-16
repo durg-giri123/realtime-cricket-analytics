@@ -1,0 +1,31 @@
+# Environment & Secrets
+.env
+*.env
+!.env.example
+
+# Python Cache & Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Temporary DB journals
+*.db-journal
+*.db-wal
+*.db-shm
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
